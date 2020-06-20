@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Library.Models.Pokemon.Pokemon>
+
+@{
+  ViewData["Title"] = "Index";
+}
+
+<h1>Pokemon</h1>
+<div class="row">
+  @foreach (var item in Model)
+  {
+    <div class="col-xs-6 col-sm-4 col-md-3">
+      <div class="pokecard card p-0 mt-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); cursor: pointer">
+        <div class="card-header bg-info text-white text-center"
+             style="padding: 5px 0;">
+          <strong>@item.Title</strong>
+        </div>
+        <div class="card-body text-center p-0">
+          <img src="@item.Thumb" style="width: 150px; height: 150px;" />
+        </div>
+      </div>
+    </div>
+  }
+</div>
+
